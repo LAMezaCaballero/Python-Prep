@@ -7,7 +7,13 @@
 
 # In[4]:
 
-
+b = 10
+if (b < 0):
+    print('La variable ',b ,' es menor a cero')
+elif (b > 0): 
+    print('La variable ',b ,' es mayor a cero')
+else:
+    print('La variable ',b ,' es igual a cero')
 
 
 
@@ -15,6 +21,14 @@
 
 # In[5]:
 
+a = 3.2
+b = 2
+if type(a) == type(b):
+    print(f'Las variables {a} y {b} son del mismo tipo de dato')
+else:
+    a = 3.2
+b = 2
+print(f'Las variables {a} y {b} son del diferentes tipo de dato')
 
 
 
@@ -23,7 +37,11 @@
 
 # In[7]:
 
-
+for i in range(1, 21):
+    if i % 2 == 0:
+        print('El número ', str(i), ' es par')
+    else:
+        print('El número ', str(i), ' es impar')
 
 
 
@@ -31,7 +49,8 @@
 
 # In[9]:
 
-
+for i in range(0, 6):
+    print('Valor:', str(i), ' Elevado a la cubo:', str(i**3))
 
 
 
@@ -39,7 +58,10 @@
 
 # In[10]:
 
-
+n = 4
+for i in range(0, n):
+    pass
+print(i)
 
 
 
@@ -47,7 +69,19 @@
 
 # In[33]:
 
-
+n = 3
+if (type(n) == int):
+    if (n > 0):
+        factorial = n
+        while (n > 2):
+            n = n - 1
+            factorial = factorial * n
+        print(f'El factorial es {factorial}')
+    else:
+        print('La variable no es mayor a cero')
+else:
+    print('La variable no es un entero')
+    
 
 
 
@@ -55,7 +89,12 @@
 
 # In[38]:
 
-
+n = 1
+while n < 10:
+    
+    for i in range(1, 6): 
+        print('la hora es ' +str(n)+':'+ str(i))
+    n += 1
 
 
 
@@ -63,21 +102,47 @@
 
 # In[3]:
 
-
+for i in range(1, 6):
+    n = 1
+    while n < 3:
+        print('la hora es ' +str(i)+':'+ str(n))
+        n += 1
 
 
 
 # 9) Imprimir los números primos existentes entre 0 y 30
 
 # In[54]:
-
+tope_rango=30
+n = 0
+primo = True
+while (n < tope_rango):
+    for div in range(2, n):
+        if (n % div == 0):
+            primo = False
+    if (primo):
+        print(n)
+    else:
+        primo = True
+    n += 1
 
 
 
 # 10) ¿Se puede mejorar el proceso del punto 9? Utilizar las sentencias break y/ó continue para tal fin
 
 # In[55]:
-
+n = 0
+primo = True
+while (n < tope_rango):
+    for div in range(2, n):
+        if (n % div == 0):
+            primo = False
+            break
+    if (primo):
+        print(n)
+    else:
+        primo = True
+    n += 1
 
 
 
@@ -86,7 +151,31 @@
 
 # In[56]:
 
+tope_rango=30
+ciclos_con_break = 0
+ciclos_sin_break = 0
+n = 0
+primo = True
+while (n < tope_rango):
+    for div in range(2, n):
+        ciclos_sin_break += 1
+    n +=1
 
+n=0    
+
+while (n < tope_rango):
+    for div in range(2, n):
+        ciclos_con_break += 1
+        if (n % div == 0):
+            primo = False
+            break
+    if (primo):
+        print(n)
+    else:
+        primo = True
+    n += 1
+print('Cantidad de ciclos: ' + str(ciclos_con_break))
+print('Se optimizó a un ' + str(ciclos_con_break/ciclos_sin_break) + '% de ciclos aplicando break')
 
 
 # In[57]:
@@ -98,7 +187,33 @@
 
 # In[58]:
 
+tope_rango=100
 
+
+ciclos_sin_break = 0
+n = 0
+while (n < tope_rango):
+    for div in range(2, n):
+        ciclos_sin_break += 1
+    n +=1
+
+ciclos_con_break = 0
+
+n = 0
+primo = True
+while (n < tope_rango):
+    for div in range(2, n):
+        ciclos_con_break += 1
+        if (n % div == 0):
+            primo = False
+            break
+    if (primo):
+        print(n)
+    else:
+        primo = True
+    n += 1
+print('Cantidad de ciclos: ' + str(ciclos_con_break))
+print('Se optimizó a un ' + str(ciclos_con_break/ciclos_sin_break) + '% de ciclos aplicando break')
 
 
 
@@ -111,7 +226,12 @@
 
 # In[62]:
 
-
+n = 99
+while(n <= 300):
+    n += 1
+    if (n % 12 != 0):
+        continue
+    print(n, ' es divisible por 12')
 
 
 
@@ -119,7 +239,23 @@
 
 # In[73]:
 
-
+n = 1
+sigue = 1
+primo = True
+while (sigue == 1):
+    for div in range(2, n):
+        if (n % div == 0):
+            primo = False
+            break
+    if (primo):
+        print(n)
+        print('¿Desea encontrar el siguiente número primo?')
+        if (input('introduce 1 si quieres continuar o solo enter para detener') != '1'):
+            print('Se finaliza el proceso')
+            break
+    else:
+        primo = True
+    n += 1
 
 
 # 15) Crear un ciclo while que encuentre dentro del rango de 100 a 300 el primer número divisible por 3 y además múltiplo de 6
@@ -127,4 +263,11 @@
 # In[75]:
 
 
+n = 100
+while(n<=300):
+    if (n % 6 == 0 and n%3 ==0 ):
+        print('El número es: ', str(n))
+        break
+    n += 1
 
+# %%

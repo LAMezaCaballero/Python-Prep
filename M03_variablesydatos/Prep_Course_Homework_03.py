@@ -7,14 +7,16 @@
 
 # In[7]:
 
+a= 12
 
+print(a)
 
 
 # 2) Imprimir el tipo de dato de la constante 8.5
 
 # In[3]:
 
-
+print(8.5)
 
 
 
@@ -22,7 +24,7 @@
 
 # In[8]:
 
-
+print(type(a))
 
 
 
@@ -30,7 +32,7 @@
 
 # In[2]:
 
-
+s='Luis Angel Meza Caballero'
 
 
 # 5) Crear una variable que contenga un número complejo
@@ -39,13 +41,13 @@
 
 
 
-
+a= 6+ 2j
 
 # 6) Mostrar el tipo de dato de la variable crada en el punto 5
 
 # In[4]:
 
-
+type(a)
 
 
 
@@ -62,7 +64,8 @@ pi = 3.1416
 # In[3]:
 
 
-
+a= True # bool
+b= 'True' #string
 
 
 # 9) Imprimir el tipo de dato correspondientes a las variables creadas en el punto 8
@@ -70,14 +73,14 @@ pi = 3.1416
 # In[5]:
 
 
-
+print(type(a), type(b))
 
 
 # 10) Asignar a una variable, la suma de un número entero y otro decimal
 
 # In[1]:
 
-
+a = 1 +1.2
 
 
 
@@ -85,7 +88,7 @@ pi = 3.1416
 
 # In[2]:
 
-
+1+1j + 2+3j
 
 
 
@@ -93,7 +96,7 @@ pi = 3.1416
 
 # In[4]:
 
-
+1 + 2+3j
 
 
 
@@ -101,7 +104,7 @@ pi = 3.1416
 
 # In[5]:
 
-
+1*1
 
 
 
@@ -109,7 +112,7 @@ pi = 3.1416
 
 # In[6]:
 
-
+2**8
 
 
 # 15) Obtener el cociente de la división de 27 entre 4 en una variable y luego mostrarla
@@ -117,14 +120,14 @@ pi = 3.1416
 # In[8]:
 
 
-
+27/4
 
 
 # 16) De la división anterior solamente mostrar la parte entera
 
 # In[9]:
 
-
+27//4
 
 
 
@@ -132,7 +135,7 @@ pi = 3.1416
 
 # In[1]:
 
-
+27%4
 
 
 
@@ -140,7 +143,7 @@ pi = 3.1416
 
 # In[2]:
 
-
+4*( 27//4)+ 27%4
 
 
 
@@ -148,7 +151,7 @@ pi = 3.1416
 
 # In[3]:
 
-
+'a'+'ñ'
 
 
 
@@ -156,7 +159,7 @@ pi = 3.1416
 
 # In[4]:
 
-
+'2'+2 #can only concatenate str (not "int") to str
 
 
 
@@ -164,7 +167,7 @@ pi = 3.1416
 
 # In[11]:
 
-
+'2'+str(2)
 
 
 
@@ -172,7 +175,9 @@ pi = 3.1416
 
 # In[12]:
 
+# es un string lo que quiere convertir a flotante. y es principalmente la coma. porque si hacemos con punto si lo permite
 
+float("3.56")
 
 
 
@@ -180,7 +185,9 @@ pi = 3.1416
 
 # In[15]:
 
-
+a =3
+a -= 1
+a
 
 
 
@@ -189,7 +196,9 @@ pi = 3.1416
 # In[29]:
 
 
-
+1 << 2  
+#1 0 0 donde hay valores en binario
+#4 2 1 valores base 10 
 
 
 # 25) Realizar la operación 2 + '2' ¿Por qué no está permitido? ¿Si los dos operandos serían del mismo tipo, siempre arrojaría el mismo resultado?
@@ -198,12 +207,12 @@ pi = 3.1416
 
 
 
-
+# string no pueden hacer operaciones. y solo funcionaria si fueran valores numericos.
 
 
 # 26) Realizar una operación válida entre valores de tipo entero y string
 
 # In[30]:
-
+2/int('2')
 
 
